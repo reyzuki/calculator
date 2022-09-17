@@ -1,44 +1,34 @@
+* {
+    font-family: 'Inconsolata', monospace;
+    color: #555;
+}
+body {
+    background-color: #3fb399;
+}
 .container {
-    max-width: 400px;
-    margin: 10vh auto 0 auto;
-    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+    width: 320px;
+    background-color: white;
+    margin: 120px auto;
 }
-
-#display {
-    text-align: right;
+table {
+    width: 100%;
+    border-color: #f4f4f4;
+}
+td {
+    width: 25%;
+}
+button {
+    width: 100%;
     height: 70px;
-    line-height: 70px;
-    padding: 16px 8px;
-    font-size: 25px;
+    font-size: 24px;
+    background-color: white;
+    border: none;
 }
-
-.buttons {
-    display: grid;
-    border-bottom: 1px solid #999;
-    border-left: 1px solid#999;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.buttons > div {
-    border-top: 1px solid #999;
-    border-right: 1px solid#999;
-}
-
-.button {
-    border: 0.5px solid #999;
-    line-height: 100px;
-    text-align: center;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-#equal {
-    background-color: rgb(85, 85, 255);
-    color: white;
-}
-
-.button:hover {
-    background-color: #323330;
-    color: white;
-    transition: 0.5s ease-in-out;
+#inputLabel {
+    height: 120px;
+    font-size: 40px;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 16px;
+    background-color: #ececec;
 }

@@ -1,27 +1,23 @@
-let display = document.getElementById('display');
-
-let buttons = Array.from(document.getElementsByClassName('button'));
-
-buttons.map( button => {
-    button.addEventListener('click', (e) => {
-        switch(e.target.innerText){
-            case 'C':
-                display.innerText = '';
-                break;
-            case '=':
-                try{
-                    display.innerText = eval(display.innerText);
-                } catch {
-                    display.innerText = "Error"
-                }
-                break;
-            case '←':
-                if (display.innerText){
-                   display.innerText = display.innerText.slice(0, -1);
-                }
-                break;
-            default:
-                display.innerText += e.target.innerText;
+var inputLabel = document.getElementById('inputLabel');
+     
+    function pushBtn(obj) {
+         
+        var pushed = obj.innerHTML;
+         
+        if (pushed == '=') {
+            // Calculate
+            inputLabel.innerHTML = eval(inputLabel.innerHTML);
+             
+        } else if (pushed == 'AC') {
+            // All Clear
+            inputLabel.innerHTML = '0';
+             
+        } else {
+            if (inputLabel.innerHTML == '0') {
+                inputLabel.innerHTML = pushed;
+                 
+            } else {
+                inputLabel.innerHTML += pushed;   
+            }
         }
-    });
-});
+    }
